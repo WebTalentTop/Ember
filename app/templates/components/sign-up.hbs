@@ -1,0 +1,100 @@
+{{#unless step5}}
+<div class="col s8 offset-s2 field-container">
+  <div class="onboarding-container">
+    <span class="step-indicator">
+      Step {{currentStep}}/{{totalSteps}}
+    </span>
+    <div class="input-container">
+      {{#if step1}}
+        {{#transition-group transition-class="exampletwo"}}
+          <div class="single-input-wrapper">
+            {{input id="name" value=name placeholder="Name" class="input-caption" }}
+            <label>Name</label>
+          </div>
+        {{/transition-group}}
+      {{/if}}
+      {{#if step2}}
+        {{#transition-group transition-class="exampletwo"}}
+          <div class="single-input-wrapper">
+            {{input id="email" value=email placeholder="Email" class="input-caption"}}
+            <label>Email Address</label>
+          </div>
+        {{/transition-group}}
+      {{/if}}
+      {{#if step3}}
+        {{#transition-group transition-class="exampletwo"}}
+          <div class="single-input-wrapper">
+            {{input id="company" value=company placeholder="Company" class="input-caption"}}
+            <label>Company</label>
+          </div>
+        {{/transition-group}}
+      {{/if}}
+      {{#if step4}}
+        {{#transition-group transition-class="exampletwo"}}
+          <div class="single-input-wrapper">
+            {{input id="mobile" value=mobile placeholder="Mobile Number" class="input-caption"}}
+            <label>Mobile</label>
+          </div>
+        {{/transition-group}}
+      {{/if}}
+    </div>
+    <br /><br /><br />
+    <span class="validate-error">
+      {{validateError}}
+    </span>
+    <br /><br /><br /><br /><br />
+    <div class="btn-group">
+      {{#unless step1}}
+        <button class="btn waves-effect waves-light white-text grey prev-btn"  onclick={{action 'prevStep'}}>
+          Previous
+        </button>
+      {{/unless}}
+      <button class="btn waves-effect waves-light white-text next-btn blue"  onclick={{action 'nextStep'}}>
+        Next Step
+      </button>
+    </div>
+  </div>
+</div>
+{{/unless}}
+{{#if step5}}
+{{#transition-group transition-class="exampletwo"}}
+<div class="row field-container">
+  <div class="last-process-container">
+    <div class="left-board">
+      <div class="card-input">
+        <label class="caption-label">Name</label><br />
+        <label class="content-label">{{name}}</label>
+      </div>
+      <div class="card-input">
+        <label class="caption-label">Company</label><br />
+        <label class="content-label">{{company}}</label>
+      </div>
+      <div class="card-input">
+        <label class="caption-label">Email</label><br />
+        <label class="content-label">{{email}}</label>
+      </div>
+      <div class="card-input">
+        <label class="caption-label">Mobile</label><br />
+        <label class="content-label">{{mobile}}</label>
+      </div>
+    </div>
+    <div class="right-board">
+      <div class="card-input">
+        <label class="caption-label">Verification Code</label><br />
+        <label class="content-label">24GAFa</label>
+      </div>
+      <div>
+        <input id="agree" type="checkbox" class="material_checkbox">
+        <label for="agree" class="agree">Agree with terms and conditions</label>
+      </div>
+      <br /><br /><br />
+      <button class="btn waves-effect waves-light white-text sign-up-btn">
+        Sign Up
+      </button><br /><br /><br />
+    </div>
+  </div>
+</div>
+{{/transition-group}}
+{{/if}}
+
+

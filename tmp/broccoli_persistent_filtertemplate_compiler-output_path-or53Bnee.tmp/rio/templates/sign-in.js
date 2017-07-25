@@ -1,0 +1,1 @@
+export default Ember.HTMLBars.template({"id":"sMwRWyz8","block":"{\"statements\":[],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}","meta":{"moduleName":"rio/templates/sign-in.hbs"}});
